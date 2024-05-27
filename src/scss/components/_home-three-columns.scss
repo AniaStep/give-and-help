@@ -1,0 +1,31 @@
+#what-it-is-about {
+  display: flex;
+  justify-content: space-around;
+  background-image: url("../../assets/3-columns-background.png");
+  height: 384px;
+}
+
+.stats-column {
+  width: 334px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.stats-num {
+  font-size: 90px;
+  font-weight: 300;
+}
+
+.stats-num-desc {
+  text-transform: uppercase;
+}
+
+.stats-full-desc {
+  font-size: 16px;
+  text-align: center;
+  font-family: $font-alt;
+  line-height: 24px;
+}
