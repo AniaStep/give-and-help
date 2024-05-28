@@ -7,17 +7,19 @@ export const HomeHeader = () => {
     return (
         <div id="start">
             <div className="home-hero-image"></div>
-            <div>
-                <div className="top-header">
-                    <Link to="/logowanie">Zaloguj</Link>
-                    <Link to="/rejestracja">Załóż konto</Link>
-                </div>
-                <div className="bottom-header">
-                    <ScrollLink to="start">Start</ScrollLink>
-                    <ScrollLink to="what-it-is-about">O co chodzi?</ScrollLink>
-                    <ScrollLink to="about-us">O nas</ScrollLink>
-                    <ScrollLink to="organizations">Fundacja i organizacje</ScrollLink>
-                    <ScrollLink to="contact">Kontakt</ScrollLink>
+            <div className="home-hero-content">
+                <div className="home-hero-header">
+                    <div className="top-header">
+                        <Link to="/logowanie">Zaloguj</Link>
+                        <Link to="/rejestracja">Załóż konto</Link>
+                    </div>
+                    <div className="bottom-header">
+                        <ScrollLink to="start">Start</ScrollLink>
+                        <ScrollLink to="what-it-is-about">O co chodzi?</ScrollLink>
+                        <ScrollLink to="about-us">O nas</ScrollLink>
+                        <ScrollLink to="organizations">Fundacja i organizacje</ScrollLink>
+                        <ScrollLink to="contact">Kontakt</ScrollLink>
+                    </div>
                 </div>
                 <div className="home-hero-text">
                     <p>Zacznij pomagać!</p>
