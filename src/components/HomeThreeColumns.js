@@ -2,7 +2,7 @@ import React from 'react';
 
 export const HomeThreeColumns = () => {
     return (
-        <div id="what-it-is-about">
+        <div className="home-three-columns">
             <div className="stats-column">
                 <p className="stats-num">10</p>
                 <p className="stats-num-desc">oddanych worków</p>

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export const HomeSimpleSteps = () => {
     return (
-        <div className="home-simple-steps-container">
+        <div id="what-it-is-about">
             <p>Wystarczą 4 proste kroki</p>
             <img src={decorationImage} alt=""/>
             <div className="grey-canvas">
