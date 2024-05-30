@@ -52,13 +52,12 @@
 }
 
 .home-hero-text {
+  @extend.title;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 38px;
-  font-weight: 600;
   gap: 30px;
   margin-right: 120px;
 }
@@ -66,20 +65,4 @@
 .home-hero-buttons {
   display: flex;
   gap: 20px;
-
-  //a {
-  //  text-decoration: none;
-  //  text-transform: uppercase;
-  //  color: $font-primary;
-  //  font-weight: 300;
-  //  font-size: 36px;
-  //}
-  //
-  //button {
-  //  width: 310px;
-  //  height: 120px;
-  //  padding: 10px 50px;
-  //  background-color: $bg-primary;
-  //  border: 0.75px solid $font-additional;
-  //}
 }
