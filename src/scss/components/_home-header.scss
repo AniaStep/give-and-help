@@ -33,9 +33,14 @@
 .bottom-header a {
   border: 1px solid transparent;
   padding: 8px;
+  text-decoration: none;
 
   &:hover {
     border: 1px solid $font-additional;
+  }
+
+  a:hover {
+    border: 1px solid transparent;
   }
 }
 
