@@ -1,4 +1,5 @@
-.login-container {
+.login-container,
+.register-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,7 +8,8 @@
   gap: 40px;
 }
 
-.login-title {
+.login-title,
+.register-title {
   text-align: center;
 
   p:first-child {
@@ -17,14 +19,17 @@
   }
 }
 
-.login-form {
+.login-form,
+.register-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   width: 385px;
-  height: 235px;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: $bg-secondary;
 
   &-field {
@@ -36,6 +41,9 @@
     input {
       width: 250px;
       height: 62px;
+      border: none;
+      border-bottom: 1px solid $font-primary;
+      background-color: transparent;
     }
 
     label {
@@ -45,7 +53,8 @@
   }
 }
 
-.login-buttons {
+.login-buttons,
+.register-buttons {
   display: flex;
   gap: 250px;
 

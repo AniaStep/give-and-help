@@ -2,15 +2,19 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import decorationImage from "../assets/decoration.svg";
+import { useLocation } from "react-router-dom";
 
 
 export const Header = () => {
+    const location = useLocation();
+
+    const pathName = location.pathname.split("/")[1];
     return (
         <>
             <div className="home-hero-header">
                 <div className="top-header">
-                    <Link to="/logowanie">Zaloguj</Link>
-                    <Link to="/rejestracja">Załóż konto</Link>
+                    <Link className={pathName === "logowanie" && "active"} to="/logowanie">Zaloguj</Link>
+                    <Link className={pathName === "rejestracja" && "active"} to="/rejestracja">Załóż konto</Link>
                 </div>
                 <div className="bottom-header">
                     <ScrollLink to="start"><Link to="/">Start</Link></ScrollLink>

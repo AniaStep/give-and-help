@@ -10,12 +10,17 @@
   display: flex;
   gap: 20px;
   justify-content: flex-end;
+  padding-right: 40px;
   cursor: pointer;
 }
 
 .top-header {
   padding-top: 30px;
   padding-bottom: 10px;
+
+  .active {
+    border: 1px solid $bg-additional;
+  }
 
   a {
     text-decoration: none;
