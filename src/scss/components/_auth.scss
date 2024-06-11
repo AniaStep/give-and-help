@@ -1,5 +1,6 @@
 .login-container,
-.register-container {
+.register-container,
+.loggedOut-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +10,8 @@
 }
 
 .login-title,
-.register-title {
+.register-title,
+.loggedOut-title {
   text-align: center;
 
   p:first-child {
@@ -17,6 +19,11 @@
     padding-top: 40px;
     padding-bottom: 30px;
   }
+}
+
+.loggedOut-title {
+  width: 500px;
+  line-height: 48px;
 }
 
 .login-form,
@@ -61,7 +68,6 @@
   button {
     width: 117px;
     height: 50px;
-    background-color: $bg-primary;
     border: none;
     padding: 0;
 
@@ -75,5 +81,17 @@
       color: black;
       font-size: 18px;
     }
+  }
+}
+
+.loggedOut-container button {
+  width: 150px;
+  height: 50px;
+  padding: 0;
+
+  a {
+    text-transform: initial;
+    font-size: 18px;
+    font-weight: 300;
   }
 }

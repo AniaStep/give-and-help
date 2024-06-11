@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from './components/Home';
 import { Login } from './components/Login';
 import { Register } from './components/Register';
+import { LoggedOut } from './components/LoggedOut';
 import { PageNotFound } from "./components/PageNotFound";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/logowanie" element={<Login />} />
         <Route path="/rejestracja" element={<Register />} />
+        <Route path="/wylogowano" element={<LoggedOut />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
   </Router>
