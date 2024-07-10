@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Give and Help
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The project is a web application designed to simplify the process of donating items to those in need. It provides users with an easy-to-use form to facilitate the donation process, addressing common issues such as trust and convenience that often hinder donations.
 
-In the project directory, you can run:
+## Problem Statement
 
-### `npm start`
+Users often have items at home they wish to donate but face several challenges:
+- Lack of trust in local collection points or containers.
+- The inconvenience of traveling to verified donation centers.
+- Uncertainty about whether donated items will reach those in need.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project aims to address these issues by offering a reliable and convenient solution for donating items.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+The project was created as part of a JavaScript course and includes the following features:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Home Page**: The main landing page of the application.
+2. **"Komu pomagamy"/"Who do we help" Section**: This section allows users to view different groups that can receive donations. It includes pagination and navigation between groups.
+3. **Contact Form**: A contact form with validation and submission functionality.
+4. **User Authentication Views**:
+    - Login view
+    - Registration view
+    - Routing between views
 
-### `npm run build`
+**Note**: The current version does not include authorization or access to the donation form view.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Note**: The project is available in the Polish language.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project utilizes the following technologies:
 
-### `npm run eject`
+- **React**
+- **React Scroll**
+- **React Router**
+- **CSS and SASS**
+- **Firebase Firestore**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here are some screenshots of the application:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Header
+![Header](demo/header.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### "Komu pomagamy"/"Who do we help" Section
+![Who do we help Section](demo/who-do-we-help.png)
 
-## Learn More
+### Contact Form
+![Contact Form](demo/contact-form.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Login View
+![Login View](demo/log-in.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Installation and Setup
 
-### Code Splitting
+To run the project locally, follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AniaStep/give-and-help
 
-### Analyzing the Bundle Size
+2. Navigate to the project directory:
+   ```bash
+   cd give-and-help
+3. Install the required dependencies:
+   ```bash
+   npm install
+4. Start the development server:
+   ```bash
+   npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Once the development server is running, you can access the application in your web browser at http://localhost:3000.
