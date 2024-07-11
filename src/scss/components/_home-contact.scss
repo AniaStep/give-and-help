@@ -27,27 +27,38 @@
 .contact-form {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 40px;
+
+  button {
+    width: 150px;
+    height: 50px;
+    color: #000000;
+    font-weight: 300;
+    line-height: 32px;
+    border: 0.75px solid $font-primary;
+    margin-bottom: 120px;
+  }
 }
 
-.contact-content,
-.contact-footer {
-  margin-right: 142px;
+.contact-content {
+  margin-right: 40px;
 }
 
 .contact-form-intro {
   text-align: center;
+  width: 528px;
   p:first-child {
     @extend.title;
-    padding-top: 40px;
     padding-bottom: 40px;
   }
 }
 
 .contact-form-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-top: 40px;
+  gap: calc(532px - 2*261px);
 
   input {
     width: 256px;
@@ -85,6 +96,7 @@
     border-left: none;
     border-right: none;
     border-bottom: 1px solid $font-additional;
+    background-color: transparent;
   }
 
   input::placeholder {
@@ -98,16 +110,6 @@
   display: flex;
   align-items: flex-end;
   gap: 729px;
-}
-
-.footer-right button {
-  width: 150px;
-  height: 50px;
-  margin-top: 44px;
-  color: #000000;
-  font-weight: 300;
-  line-height: 32px;
-  border: 0.75px solid $font-primary;
 }
 
 .footer-right {
