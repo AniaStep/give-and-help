@@ -2,11 +2,14 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import decorationImage from "../assets/decoration.svg";
+import { useAuth } from "../firebase/auth-provider";
+import { auth } from '../firebase/config';
 
 export const Header = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const pathName = location.pathname.split("/")[1];
+    const user = useAuth()
 
     const handleNavigation = (to) => {
         navigate("/");
@@ -15,13 +18,32 @@ export const Header = () => {
         }, 0);
     };
 
+    const handleLogout = () => {
+        auth.signOut()
+            .then(() => {
+                navigate("/wylogowano");
+            })
+            .catch(error => {
+                console.error("Error signing out: ", error);
+            });
+    };
+
     return (
         <>
             <div className="home-hero-header">
-                <div className="top-header">
-                    <Link className={pathName === "logowanie" ? "active" : undefined} to="/logowanie">Zaloguj</Link>
-                    <Link className={pathName === "rejestracja" ? "active" : undefined} to="/rejestracja">Załóż konto</Link>
-                </div>
+                {pathName === "oddaj-rzeczy" ?
+                    <div className="top-header-logged-in">
+                        <a>Cześć{user !== null ? " " + user.email + "!" : "!"}</a>
+                        <a>Oddaj rzeczy</a>
+                        <Link to="/wylogowano" onClick={handleLogout}>Wyloguj</Link>
+                    </div> :
+                    <div className="top-header">
+                        <Link className={pathName === "logowanie" ? "active" : undefined} to="/logowanie">Zaloguj</Link>
+                        <Link className={pathName === "rejestracja" ? "active" : undefined} to="/rejestracja">Załóż
+                            konto</Link>
+                    </div>
+                }
+
                 <div className="bottom-header">
                     <span onClick={() => handleNavigation("start")}>Start</span>
                     <span onClick={() => handleNavigation("what-it-is-about")}>O co chodzi?</span>

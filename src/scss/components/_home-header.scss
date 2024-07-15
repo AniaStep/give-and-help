@@ -6,6 +6,7 @@
 }
 
 .top-header,
+.top-header-logged-in,
 .bottom-header {
   display: flex;
   gap: 20px;
@@ -14,7 +15,8 @@
   cursor: pointer;
 }
 
-.top-header {
+.top-header,
+.top-header-logged-in {
   padding-top: 30px;
   padding-bottom: 10px;
 
