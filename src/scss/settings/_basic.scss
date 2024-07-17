@@ -31,4 +31,15 @@ button {
 
 .error {
   color: red;
+  width: 250px;
+  white-space: normal;
+  overflow-wrap: normal;
+}
+
+.error-below-form {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
