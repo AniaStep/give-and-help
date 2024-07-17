@@ -3,12 +3,29 @@ import { useForm } from 'react-hook-form';
 import decorationImage from "../assets/decoration.svg";
 import facebookIcon from "../assets/facebook.svg";
 import instagramIcon from "../assets/instagram.svg";
+import { db } from "../firebase/config";
+import {
+    collection,
+    addDoc
+} from "firebase/firestore";
 
 export const HomeContact = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = data => {
+    const onSubmit = async (data) => {
         console.log(data);
+
+        try {
+            await addDoc(collection(db, 'contactForm'), {
+                name: data.name,
+                email: data.email,
+                message: data.message,
+            });
+            alert('Wiadomość została wysłana!');
+        } catch (error) {
+            console.error('Error adding document: ', error);
+            alert('Niestety nie udało się wysłać wiadomości. Spróbuj ponownie.');
+        }
     };
 
     return (
