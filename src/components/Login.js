@@ -1,40 +1,26 @@
 import React, { useState } from "react";
+import { useForm } from 'react-hook-form';
 import { Header } from "./HomeHeader";
 import decorationImage from "../assets/decoration.svg";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase/config';
+import { errorsPL } from "../firebase/errors-dictionary";
 
 export const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate();
+    const [error, setError] = useState(null);
 
-    // Dictionary of errors in Polish
-    const errorsPL = {
-        'auth/invalid-email': 'Nie wpisano emaila lub email jest niepoprawny.',
-        'auth/invalid-credential': 'Email lub hasło jest niepoprawne.',
-    };
-
-    // Function for signing in
-    const signIn = async () => {
+    const onSubmit = async (data) => {
         try {
-            await signInWithEmailAndPassword(auth, email, password);
+            await signInWithEmailAndPassword(auth, data.email, data.password);
             navigate(`/oddaj-rzeczy`);
         } catch (err) {
             setError(errorsPL[err.code] || 'Wystąpił błąd podczas logowania.');
             console.error(err);
         }
     }
-
-    // Enabling signing in by using Enter
-    const handleKeyPress = (e) => {
-        if (e.key === "Enter") {
-            signIn();
-        }
-    };
 
     return (
         <div>
@@ -44,31 +30,33 @@ export const Login = () => {
                     <p>Zaloguj się</p>
                     <img src={decorationImage} alt=""/>
                 </div>
-                <form className="login-form">
-                    <div className="login-form-field">
-                        <label>Email</label>
-                        <input
-                            type="email"
-                            onChange={(e) => setEmail(e.target.value)}
-                            onKeyDown={handleKeyPress}
-                        />
+                <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+                    <div className="login-form-fields">
+                        <div className="login-form-field">
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                {...register('email', {required: true})}
+                            />
+                            {errors.email && <p className="error">Email jest wymagany.</p>}
+                        </div>
+                        <div className="login-form-field">
+                            <label>Hasło</label>
+                            <input
+                                type="password"
+                                {...register('password', {required: true})}
+                            />
+                            {errors.password && <p className="error">Hasło jest wymagane.</p>}
+                        </div>
                     </div>
-                    <div className="login-form-field">
-                        <label>Hasło</label>
-                        <input
-                            type="text"
-                            onChange={(e) => setPassword(e.target.value)}
-                            onKeyDown={handleKeyPress}
-                        />
+                    <div className="error error-below-form">
+                        {error}
+                    </div>
+                    <div className="login-buttons">
+                        <button type="button"><Link to="/rejestracja">Załóż konto</Link></button>
+                        <button type="submit">Zaloguj się</button>
                     </div>
                 </form>
-                <div style={{ color: "red", height: "20px" }}>
-                    {error}
-                </div>
-                <div className="login-buttons">
-                    <button><Link to="/rejestracja">Załóż konto</Link></button>
-                    <button onClick={signIn}><Link to="/logowanie">Zaloguj się</Link></button>
-                </div>
             </div>
         </div>
     )
