@@ -96,3 +96,48 @@
 .selected {
   border: 0.75px solid $font-primary;
 }
+
+@media (max-width: 1469px) {
+  .organizations-content {
+    width: 640px;
+    height: 680px;
+  }
+  .organizations-list {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .organizations-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 710px) {
+  .organizations-types {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 680px) {
+  .organizations-content,
+  .organizations-intro {
+    width: 100%;
+  }
+
+  .organizations-desc,
+  .organizations-list {
+    width: 500px;
+  }
+
+  .org-type {
+    width: 160px;
+    font-size: 20px;
+  }
+
+  .organizations-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

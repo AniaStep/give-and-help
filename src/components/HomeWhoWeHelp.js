@@ -135,7 +135,7 @@ const Foundations = ({ currentPage, itemsPerPage, paginate }) => {
     const currentItems = foundations.slice(indexOfFirstItem, indexOfLastItem);
 
     return (
-        <div>
+        <>
             <p className="organizations-desc">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić, czym się zajmują, komu pomagają i czego potrzebują.</p>
             <ul className="organizations-list">
                 {currentItems.map((foundation) => {
@@ -153,7 +153,7 @@ const Foundations = ({ currentPage, itemsPerPage, paginate }) => {
                 })}
             </ul>
             <Pagination currentPage={currentPage} itemsPerPage={itemsPerPage} totalItems={foundations.length} paginate={paginate} />
-        </div>
+        </>
     )
 }
 
@@ -163,7 +163,7 @@ const NGOs = ({ currentPage, itemsPerPage, paginate }) => {
     const currentItems = ngos.slice(indexOfFirstItem, indexOfLastItem);
 
     return (
-        <div>
+        <>
             <p className="organizations-desc">W naszej bazie znajdziesz listę zweryfikowanych NGOs, z którymi
                 współpracujemy. Możesz sprawdzić, czym się zajmują, komu pomagają i czego potrzebują.</p>
             <ul className="organizations-list">
@@ -182,7 +182,7 @@ const NGOs = ({ currentPage, itemsPerPage, paginate }) => {
                 })}
             </ul>
             <Pagination currentPage={currentPage} itemsPerPage={itemsPerPage} totalItems={ngos.length} paginate={paginate} />
-        </div>
+        </>
     )
 }
 
@@ -192,7 +192,7 @@ const Collections = ({ currentPage, itemsPerPage, paginate }) => {
     const currentItems = collections.slice(indexOfFirstItem, indexOfLastItem);
 
     return (
-        <div>
+        <>
             <p className="organizations-desc">W naszej bazie znajdziesz listę zweryfikowanych zbiórek przeprowadzanych lokalnie. Możesz sprawdzić, czego potrzebują.</p>
             <ul className="organizations-list">
                 {currentItems.map((collection) => {
@@ -210,7 +210,7 @@ const Collections = ({ currentPage, itemsPerPage, paginate }) => {
                 })}
             </ul>
             <Pagination currentPage={currentPage} itemsPerPage={itemsPerPage} totalItems={collections.length} paginate={paginate} />
-        </div>
+        </>
     )
 }
 

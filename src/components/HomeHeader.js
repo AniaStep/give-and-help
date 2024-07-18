@@ -44,6 +44,13 @@ export const Header = () => {
                     </div>
                 }
 
+                <input type="checkbox" className="menu-btn" id="menu-btn"/>
+                <label htmlFor="menu-btn" className="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
                 <div className="bottom-header">
                     <span onClick={() => handleNavigation("start")}>Start</span>
                     <span onClick={() => handleNavigation("what-it-is-about")}>O co chodzi?</span>
@@ -51,6 +58,8 @@ export const Header = () => {
                     <span onClick={() => handleNavigation("organizations")}>Fundacja i organizacje</span>
                     <span onClick={() => handleNavigation("contact")}>Kontakt</span>
                 </div>
+
+
             </div>
         </>
     );
@@ -66,6 +75,7 @@ export const HomeHeader = () => {
                     <p>Zacznij pomagać!</p>
                     <p>Oddaj niechciane rzeczy w zaufane ręce</p>
                     <img src={decorationImage} alt=""/>
+                    <div className="home-hero-image-small"></div>
                     <div className="home-hero-buttons">
                         <button><Link to="/logowanie">Oddaj rzeczy</Link></button>
                         <button><Link to="/logowanie">Zorganizuj zbiórkę</Link></button>

@@ -29,3 +29,14 @@
   font-family: $font-alt;
   line-height: 24px;
 }
+
+@media (max-width: 1010px) {
+  .home-three-columns {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    height: auto;
+  }
+}
