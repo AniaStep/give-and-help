@@ -75,7 +75,6 @@ export const HomeHeader = () => {
                     <p>Zacznij pomagać!</p>
                     <p>Oddaj niechciane rzeczy w zaufane ręce</p>
                     <img src={decorationImage} alt=""/>
-                    <div className="home-hero-image-small"></div>
                     <div className="home-hero-buttons">
                         <button><Link to="/logowanie">Oddaj rzeczy</Link></button>
                         <button><Link to="/logowanie">Zorganizuj zbiórkę</Link></button>

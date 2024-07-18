@@ -76,23 +76,18 @@
   background-position: right;
 }
 
-.home-hero-content {
-  padding-right: 60px;
-}
-
 .home-hero-text {
   @extend.title;
-  height: 100%;
+  height: calc(100% - 106px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-right: 120px;
   text-wrap: wrap;
   text-align: center;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 40px;
 }
 
 .home-hero-buttons {
@@ -100,35 +95,14 @@
   gap: 20px;
 }
 
-@media (max-width: 1469px) {
-  .home-hero-content {
-    width: 100%;
-    padding-bottom: 80px;
-  }
-
-  .home-hero-image {
-    display: none;
-  }
-
-  .home-hero-image-small {
-    height: 50%;
-    width: 50%;
-    background-image: url(../../assets/home-hero-image.jpg);
-    background-size: cover;
-    background-position: bottom;
-  }
-
-  .home-hero-text {
-    margin-right: 0;
-  }
-}
 
 @media (max-width: 1240px) {
-  .home-hero-image-small {
-    display: none;
-  }
+.home-hero-image {
+  display: none;
+}
 
   .home-hero-content {
+    width: 100%;
     background-image: url(../../assets/home-hero-image.jpg);
     background-size: cover;
     background-position: right;
@@ -137,11 +111,11 @@
 
   .home-hero-text,
   .home-hero-header {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 720px) {
 .home-hero-buttons button {
   width: 240px;
   height: 100px;
