@@ -4,14 +4,6 @@
 
 The project is a web application designed to simplify the process of donating items to those in need. It provides users with an easy-to-use form to facilitate the donation process, addressing common issues such as trust and convenience that often hinder donations.
 
-## Problem Statement
-
-Users often have items at home they wish to donate but face several challenges:
-- Lack of trust in local collection points or containers.
-- The inconvenience of traveling to verified donation centers.
-- Uncertainty about whether donated items will reach those in need.
-
-This project aims to address these issues by offering a reliable and convenient solution for donating items.
 
 ## Features
 
@@ -25,18 +17,19 @@ The project was created as part of a JavaScript course and includes the followin
     - Registration view
     - Routing between views
 
-**Note**: The current version does not include authorization or access to the donation form view.
-
-**Note**: The project is available in the Polish language.
+The project is fully responsive (RWD).
 
 ## Technologies Used
 
 The project utilizes the following technologies:
 
+- **JavaScript**
 - **React**
 - **React Scroll**
+- **React Hook Form**
 - **React Router**
 - **CSS and SASS**
+- **Firebase Authentication**
 - **Firebase Firestore**
 
 ## Screenshots
