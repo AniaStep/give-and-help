@@ -152,12 +152,13 @@
   .bottom-header {
     position: absolute;
     left: 20px;
-    top: 60px;
+    top: 62px;
     flex-direction: column;
     width: 100%;
     padding-bottom: 20px;
     display: none;
     gap: 0;
+    line-height: 0.9;
 
     span {
       &:hover {
@@ -168,6 +169,11 @@
         border-radius: 2%;
       }
     }
+  }
+
+  .bottom-header-bg {
+    background-color: $bg-primary;
+    opacity: 0.9;
   }
 
   .menu-btn:checked {

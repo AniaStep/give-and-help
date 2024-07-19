@@ -51,15 +51,13 @@ export const Header = () => {
                     <span></span>
                 </label>
 
-                <div className="bottom-header">
+                <div className={pathName === "logowanie" || pathName === "rejestracja" ? "bottom-header bottom-header-bg" : "bottom-header"}>
                     <span onClick={() => handleNavigation("start")}>Start</span>
                     <span onClick={() => handleNavigation("what-it-is-about")}>O co chodzi?</span>
                     <span onClick={() => handleNavigation("about-us")}>O nas</span>
                     <span onClick={() => handleNavigation("organizations")}>Fundacja i organizacje</span>
                     <span onClick={() => handleNavigation("contact")}>Kontakt</span>
                 </div>
-
-
             </div>
         </>
     );
