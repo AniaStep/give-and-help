@@ -40,3 +40,9 @@
     height: auto;
   }
 }
+
+@media (max-width: 370px) {
+  .stats-column {
+   width: 300px;
+  }
+}

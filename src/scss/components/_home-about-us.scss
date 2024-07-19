@@ -50,7 +50,6 @@
     width: 100%;
     background-image: url("../../assets/people.jpg");
     background-size: cover;
-    background-color: #FAD648;
     position: absolute;
     z-index: 1;
   }
@@ -68,5 +67,16 @@
   .about-us-text p:nth-child(3) {
     width: 460px;
     font-size: 26px;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-us-text p:nth-child(3) {
+    width: 300px;
+    font-size: 20px;
+    line-height: 1.9;
+  }
+  .about-us-image {
+    background-position: center;
   }
 }

@@ -103,3 +103,19 @@
     font-weight: 300;
   }
 }
+
+@media (max-width: 510px) {
+  .login-form,
+  .register-form {
+    width: 300px;
+
+    &-fields {
+      width: 100%;
+    }
+
+    .login-buttons,
+    .register-buttons {
+      gap: 50px;
+    }
+  }
+}

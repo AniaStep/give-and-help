@@ -141,3 +141,31 @@
     align-items: center;
   }
 }
+
+@media (max-width: 556px) {
+  .organizations-content {
+    height: auto;
+  }
+
+  .org-type {
+    width: 88px;
+    height: 60px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .organizations-desc {
+  width: 300px;
+  font-size: 16px;
+  }
+
+  .organizations-list {
+    width: 300px;
+  }
+
+  .org-name-mission {
+    p:first-child {
+      font-size: 20px;
+    }
+  }
+}

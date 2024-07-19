@@ -112,19 +112,42 @@
   .home-hero-text,
   .home-hero-header {
     background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 40px;
   }
 }
 
 @media (max-width: 720px) {
-.home-hero-buttons button {
-  width: 240px;
-  height: 100px;
-  padding: 6px 30px;
-
-  a {
-    font-size: 28px;
+  #start {
+    height: 700px;
   }
-}
+
+  .home-hero-content {
+    background-size: 680px 100%;
+    background-position: left bottom;
+  }
+
+  .home-hero-buttons {
+    margin-bottom: 60px;
+
+    button {
+      width: 126px;
+      height: 80px;
+      padding: 2px 5px;
+
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .home-hero-text {
+    height: calc(700px - 71px);
+    justify-content: flex-end;
+
+    p:nth-child(2) {
+      font-size: 20px;
+    }
+  }
 
   .bottom-header {
     position: absolute;
@@ -134,6 +157,7 @@
     width: 100%;
     padding-bottom: 20px;
     display: none;
+    gap: 0;
 
     span {
       &:hover {
