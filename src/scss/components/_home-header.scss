@@ -152,7 +152,7 @@
   .bottom-header {
     position: absolute;
     left: 20px;
-    top: 62px;
+    top: 64px;
     flex-direction: column;
     width: 100%;
     padding-bottom: 20px;
@@ -173,7 +173,9 @@
 
   .bottom-header-bg {
     background-color: $bg-primary;
-    opacity: 0.9;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s;
+    width: 205px;
   }
 
   .menu-btn:checked {
